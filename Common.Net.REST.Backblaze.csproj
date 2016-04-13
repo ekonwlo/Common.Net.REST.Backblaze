@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE82ECFC-C6F4-47E5-B575-25370C0A9D27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Net.REST.Backblaze</RootNamespace>
+    <AssemblyName>Common.Net.REST.Backblaze</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Runtime.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Common.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackblazeRequest.cs" />
+    <Compile Include="BackblazeResponse.cs" />
+    <Compile Include="v1\B2\B2Api.cs" />
+    <Compile Include="v1\B2\B2AuthorizationCredentials.cs" />
+    <Compile Include="v1\B2\B2AuthorizeAccountRequest.cs" />
+    <Compile Include="v1\B2\B2AuthorizeAccountResponse.cs" />
+    <Compile Include="v1\B2\B2BucketInfo.cs" />
+    <Compile Include="v1\B2\B2CreateBucketRequest.cs" />
+    <Compile Include="v1\B2\B2CreateBucketResponse.cs" />
+    <Compile Include="v1\B2\B2Exception.cs" />
+    <Compile Include="v1\B2\B2ExceptionMessage.cs" />
+    <Compile Include="v1\B2\B2FileInfo.cs" />
+    <Compile Include="v1\B2\B2GetFileInfoRequest.cs" />
+    <Compile Include="v1\B2\B2GetFileInfoResponse.cs" />
+    <Compile Include="v1\B2\B2ListBucketsRequest.cs" />
+    <Compile Include="v1\B2\B2ListBucketsResponse.cs" />
+    <Compile Include="v1\B2\B2Request.cs" />
+    <Compile Include="v1\B2\B2Response.cs" />
+    <Compile Include="v1\B2\Content\B2AuthorizeResponseAccountContent.cs" />
+    <Compile Include="v1\B2\Content\B2CreateBucketRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2FileInfoRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2ListBucketRequestContent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="v1\B2\Content\B2FileInfoResponseContent.cs" />
+    <Compile Include="v1\B2\Content\B2ListBucketResponseContent.cs" />
+    <Compile Include="v1\B2\Content\B2DeleteBucketRequestContent.cs" />
+    <Compile Include="v1\B2\B2DeleteBucketRequest.cs" />
+    <Compile Include="v1\B2\B2DeleteBucketResponse.cs" />
+    <Compile Include="v1\B2\Content\B2GetUploadUrlResponseContent.cs" />
+    <Compile Include="v1\B2\B2GetUploadUrlRequest.cs" />
+    <Compile Include="v1\B2\B2GetUploadUrlResponse.cs" />
+    <Compile Include="v1\B2\Content\B2GetUploadUrlRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2UploadFileResponseContent.cs" />
+    <Compile Include="v1\B2\B2UploadFileRequest.cs" />
+    <Compile Include="v1\B2\B2UploadFileResponse.cs" />
+    <Compile Include="v1\B2\Content\B2ListFileNamesRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2ListFileNamesResponseContent.cs" />
+    <Compile Include="v1\B2\B2ListFileNamesRequest.cs" />
+    <Compile Include="v1\B2\B2ListFileNamesResponse.cs" />
+    <Compile Include="v1\B2\Content\B2DeleteFileVersionResponseContent.cs" />
+    <Compile Include="v1\B2\Content\B2DeleteFileVersionRequestContent.cs" />
+    <Compile Include="v1\B2\B2DeleteFileVersionRequest.cs" />
+    <Compile Include="v1\B2\B2DeleteFileVersionResponse.cs" />
+    <Compile Include="v1\B2\Content\B2UpdateBucketRequestContent.cs" />
+    <Compile Include="v1\B2\B2UpdateBucketRequest.cs" />
+    <Compile Include="v1\B2\B2UpdateBucketResponse.cs" />
+    <Compile Include="v1\B2\Content\B2HideFileRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2HideFileResponseContent.cs" />
+    <Compile Include="v1\B2\B2HideFileRequest.cs" />
+    <Compile Include="v1\B2\B2HideFileResponse.cs" />
+    <Compile Include="v1\B2\Content\B2ListFileVersionsRequestContent.cs" />
+    <Compile Include="v1\B2\Content\B2ListFileVersionsResponseContent.cs" />
+    <Compile Include="v1\B2\B2ListFileVersionsRequest.cs" />
+    <Compile Include="v1\B2\B2ListFileVersionsResponse.cs" />
+    <Compile Include="v1\B2\Transformation\AuthorizationTransformation.cs" />
+    <Compile Include="v1\B2\Transformation\FileNameTransformation.cs" />
+    <Compile Include="v1\B2\Transformation\Sha1Transformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common.Net.REST\Common.Net.REST.csproj">
+      <Project>{9E95ABDB-CF25-4FDF-8CD6-8BDA4A1E6007}</Project>
+      <Name>Common.Net.REST</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)*.dll" "C:\Users\ekonwlo\Documents\Visual Studio 2010\Projects\Common.Servers\Libraries\*.dll"
+copy /Y "$(TargetDir)*.dll" "C:\Users\ekonwlo\Documents\Visual Studio 2010\Projects\ConsistencyCheck\Libraries\*.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
