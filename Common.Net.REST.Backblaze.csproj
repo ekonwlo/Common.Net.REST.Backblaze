@@ -31,10 +31,32 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Runtime.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\Common.Runtime.Serialization.dll</HintPath>
+    <Reference Include="Common.Net.REST, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Net.REST.1.0.0.1\lib\net40\Common.Net.REST.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Runtime.Serialization, Version=0.9.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Runtime.Serialization.0.9.0.1\lib\net40\Common.Runtime.Serialization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -104,16 +126,12 @@
     <Compile Include="v1\B2\Transformation\Sha1Transformation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common.Net.REST\Common.Net.REST.csproj">
-      <Project>{9E95ABDB-CF25-4FDF-8CD6-8BDA4A1E6007}</Project>
-      <Name>Common.Net.REST</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)*.dll" "C:\Users\ekonwlo\Documents\Visual Studio 2010\Projects\Common.Servers\Libraries\*.dll"
-copy /Y "$(TargetDir)*.dll" "C:\Users\ekonwlo\Documents\Visual Studio 2010\Projects\ConsistencyCheck\Libraries\*.dll"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
