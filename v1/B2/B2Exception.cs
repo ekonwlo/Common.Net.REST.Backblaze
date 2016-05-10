@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using Common.Net.REST;
+
 namespace Common.Net.REST.Backblaze.v1.B2
 {
     using Attributes;
+	using Content;
 
     public class B2Exception
         : RestException
     {
 
         [RestContent("content")]    
-        public B2ExceptionMessage Content { get; private set; }
+        public B2ExceptionContent Content { get; private set; }
         
         protected internal B2Exception()
             : base()

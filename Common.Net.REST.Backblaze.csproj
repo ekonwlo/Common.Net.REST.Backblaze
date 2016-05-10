@@ -50,12 +50,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Net.REST, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Net.REST.1.0.0.1\lib\net40\Common.Net.REST.dll</HintPath>
+    <Reference Include="Common.Net.REST, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Net.REST.1.0.0.4\lib\net40\Common.Net.REST.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Common.Runtime.Serialization, Version=0.9.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Runtime.Serialization.0.9.0.1\lib\net40\Common.Runtime.Serialization.dll</HintPath>
+    <Reference Include="Common.Runtime.Serialization, Version=0.9.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Runtime.Serialization.0.9.0.2\lib\net40\Common.Runtime.Serialization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -77,7 +77,7 @@
     <Compile Include="v1\B2\B2CreateBucketRequest.cs" />
     <Compile Include="v1\B2\B2CreateBucketResponse.cs" />
     <Compile Include="v1\B2\B2Exception.cs" />
-    <Compile Include="v1\B2\B2ExceptionMessage.cs" />
+    <Compile Include="v1\B2\Content\B2ExceptionContent.cs" />
     <Compile Include="v1\B2\B2FileInfo.cs" />
     <Compile Include="v1\B2\B2GetFileInfoRequest.cs" />
     <Compile Include="v1\B2\B2GetFileInfoResponse.cs" />

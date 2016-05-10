@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 
-namespace Common.Net.REST.Backblaze.v1.B2
+namespace Common.Net.REST.Backblaze.v1.B2.Content
 {
     using Attributes;
 
     [Serializable()]
-    public class B2ExceptionMessage
+    public class B2ExceptionContent
     {
         [RestContent("code")]
         public string Code { get; private set; }
@@ -20,7 +20,7 @@ namespace Common.Net.REST.Backblaze.v1.B2
         [RestContent("status")]
         public int Status { get; private set; }
 
-        private B2ExceptionMessage() { }
+        private B2ExceptionContent() { }
 
         //protected internal B2Exception(SerializationInfo info, StreamingContext context) '{ }
         
